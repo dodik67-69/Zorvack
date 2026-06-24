@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "lightmod",
+  "version": "${version}",
+  "name": "LightMod",
+  "description": "Performance optimizer for weak hardware. Works on 26.1.2 and 26.2. Compatible with Sodium and Iris Shaders. No Vulkan required.",
+  "authors": ["Your Name"],
+  "contact": {
+    "sources": "https://github.com/yourname/lightmod",
+    "issues":  "https://github.com/yourname/lightmod/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/lightmod/icon.png",
+  "environment": "client",
+
+  "entrypoints": {
+    "client": ["dev.lightmod.LightMod"],
+    "modmenu": ["dev.lightmod.screen.ModMenuIntegration"]
+  },
+
+  "mixins": ["lightmod.mixins.json"],
+
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": ["26.1.x", "26.2"],
+    "cloth-config": "*"
+  },
+
+  "suggests": {
+    "modmenu": "*",
+    "sodium": "*",
+    "iris": "*"
+  },
+
+  "breaks": {
+    "optifabric": "*"
+  }
+}
